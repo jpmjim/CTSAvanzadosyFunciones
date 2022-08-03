@@ -71,3 +71,13 @@ Curso de TypeScript: Tipos Avanzados y Funciones
     imageElement.src = imageUrl;
   };
   ```
+
+## Tuples
+  - Las tuplas nos sirven para hacer un array fuertemente tipado especificando el tipo de dato de cada elemento del array así como la cantidad de elementos. Para hacer una tupla lo hacemos de la siguiente manera.
+  - Las tuplas usualmente podemos tender a decir que son iguales a los tipos types si bien son “parecidas” no son iguales.
+  - Ya que al definir un tipo, estamos definiendo los tipos que recibe esa variable, y al definir una tupla estamos definiendo el tipo que recibe un array justamente en la posición que lo estamos definiendo
+
+  - [Basic Hooks de React](https://reactjs.org/docs/hooks-reference.html#usestate) usan tuplas.
+  ```javascript
+  const [state, setState] = useState(initialState);
+  ```
