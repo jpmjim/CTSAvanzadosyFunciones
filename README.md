@@ -187,3 +187,18 @@ Curso de TypeScript: Tipos Avanzados y Funciones
     return a + b + c;
   }
   ```
+
+## Sobrecarga de funciones: la solución
+  En conclusión, lo que vamos a hacer es escribir de nuevo la función con los parámetros y su tipo de dato de retorno antes de declarar la función como tal, para que de esa forma TS sepa en que casos se retorna cierto valor. Se que no le entendiste, veamos un ejemplo.
+  ```typescript
+  function suma(a: number, b: number): number;
+  function suma(a: number, b: number, c: number): number;
+  function suma(a: number, b: number, c?: number): number {
+    if (c) {
+      return a + b + c;
+    } else {
+      return a + b;
+    }
+  }
+  ```
+  
