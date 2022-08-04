@@ -211,3 +211,17 @@ Curso de TypeScript: Tipos Avanzados y Funciones
   ![](https://static.platzi.com/media/user_upload/3-de869952-ef8f-466c-be14-c6ec7620346a.jpg)
   ![](https://static.platzi.com/media/user_upload/4-698c2d2e-b287-4727-beac-1e5c44c8fa2a.jpg)
   ![](https://static.platzi.com/media/user_upload/5-5f0ead6f-e36b-42b1-b25b-6bb7cc2f15df.jpg)
+
+## Interfaces
+  Es una forma interesante de trabajar con los objetos y clases. Lo podemos usar de la misma manera que los types.
+  ### Diferencias entre type e interface
+  - Con type yo puedo definir tipos primitivos o directos (declaraciones cortas y puntuales), mientras que una interface necesita todo un cuerpo.
+  - A interface lo usamos para un conjunto de atributos de valores.
+  - Interface tiene la particularidad de que se puede extender, mientras que los type no.
+  - Interface tiene la particularidad de que se puede heredar, mientras que los type no.
+  ```typescript
+  interface interfaceName {
+	statements
+  }
+  ```
+
