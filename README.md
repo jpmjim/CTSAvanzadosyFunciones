@@ -225,3 +225,28 @@ Curso de TypeScript: Tipos Avanzados y Funciones
   }
   ```
 
+## Estructuras complejas
+  Para crear estructuras complejas de interfaces es necesario definir el model de cada uno de elos.
+
+  Por ejemplo, en u E-commerce existe un producto el cual esta compuesto por distintas variables, y para este producto podemos definir su interfaz
+
+  Un usuario también tiene sus propios datos y podríamos definir una interfaz para ese usuario
+
+  Y al crear una compra, el usuario esta generando una orden la cual también tiene una interfaz e incluso esa orden incluye un usuario, que es el usuario que compro, y tambien incluye uno o más productos.
+
+  Lo más recomendable es crear un modelo de cada uno de ellos siguiendo los siguientes nombres de ejemplo product.model.ts, user.model.ts, order.model.ts, donde estas interfaces se puedan exportar e importar, agregando en cada archivo de estos modelos el export interface .... de esta manera podemos agregar y ampliar las interfaces, por ejemplo:
+
+  Imaginemos que ya creamos la interfaz del producto y del usuario, y solo necesitamos agregarla en la interfaz de la orden.
+
+  En algunos casos las clases pueden tener el mismo nombre que las interfaces. Por esa razón es recomendable nombrar a las interfaces con el prefijo Interface. Aquí un ejemplo:
+  ```typescript
+  class Person {
+    @code...
+  }
+
+  interface PersonInterface {
+      @code...
+  }
+  ```
+
+
