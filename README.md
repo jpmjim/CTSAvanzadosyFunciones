@@ -148,3 +148,23 @@ Curso de TypeScript: Tipos Avanzados y Funciones
 
 ## Parámetros por defecto
   Parámetros por defecto son aquellos que no son obligatorios, y si no se les pasa un valor, se asigna un valor por defecto.
+
+## Parámetros rest
+  Se apoya en la flexibilidad que tenemos en JavaScript de enviar parámetros sin ningún problema, que no tienen un fin.
+
+  Rest parameters nos permite mandar un conjunto de argumentos a nuestra función y ella los recibe como un arreglo.
+
+  ### Spread operator
+  A demás de usarlo en poder copiar objetos, también podemos usarlo para poder recibir N parámetros en una función, además vamos a recibir esos parámetros como un array de argumentos.
+
+  - Sintaxis en JavaScript
+  ```javascript
+  function functionName (...parameters) {
+	  statements
+  }
+  ```
+  - Sintaxis en TypeScript
+  ```typescript
+  function functionName (...parameters: dataType[]) {
+	  statements
+  }
