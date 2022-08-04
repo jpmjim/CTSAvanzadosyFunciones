@@ -81,3 +81,15 @@ Curso de TypeScript: Tipos Avanzados y Funciones
   ```javascript
   const [state, setState] = useState(initialState);
   ```
+
+## Unknown type
+  Este tipo de dato es la mejora de any, ya que nos da la flexibilidad que en ocasiones queremos pero sin apagar por completo el análisis de código estático. Unknown nos fuerza a hacer una verificación de tipo.
+  ```typescript
+  const myVariable: unknown = 'Hello';
+  if (typeof myVariable === 'string') {
+    console.log(myVariable.length);
+  }
+  ```
+  Sabemos que para usar “cualquier tipo de dato” podemos usar el tipo any sin embargo, esto es peligroso ya que le indicamos que puede entrar cualquier tipo de dato.
+
+  Es por ello que es una muy buena práctica utilizar el tipo de dato unknown ya que esta nos permite trabajar con cualquier tipo de dato pero en base al tipo de dato podemos asignarla a otra variable o realizar algo en especial.
