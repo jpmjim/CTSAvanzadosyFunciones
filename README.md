@@ -119,3 +119,31 @@ Curso de TypeScript: Tipos Avanzados y Funciones
       while(true){}
   }
   ```
+
+## Parámetros opcionales y nullish-coalescing
+  Parámetros opcionales son aquellos que no son obligatorios, y si no se les pasa un valor, se asigna un valor por defecto.
+  ```typescript
+  function myFunction(parametroOpcional?: string): void {
+    if (parametroOpcional) {
+      console.log(parametroOpcional);
+    } else {
+      console.log('No hay parametro');
+    }
+  }
+  ```
+  En el ejemplo anterior, si no se le pasa un valor al parámetro, se asigna un valor por defecto.
+  ```typescript
+  function myFunction(parametroOpcional?: string): void {
+    parametroOpcional = parametroOpcional || 'No hay parametro';
+    console.log(parametroOpcional);
+  }
+  ```
+  Nullish-coalescing es un operador que nos permite asignar un valor por defecto a una variable si no se le pasa un valor.
+  ```typescript
+  function myFunction(parametroOpcional?: string): void {
+    const parametro = parametroOpcional ?? 'No hay parametro';
+    console.log(parametro);
+  }
+  ```
+
+
