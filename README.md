@@ -146,4 +146,5 @@ Curso de TypeScript: Tipos Avanzados y Funciones
   }
   ```
 
-
+## Parámetros por defecto
+  Parámetros por defecto son aquellos que no son obligatorios, y si no se les pasa un valor, se asigna un valor por defecto.
