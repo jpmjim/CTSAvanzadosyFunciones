@@ -93,3 +93,29 @@ Curso de TypeScript: Tipos Avanzados y Funciones
   Sabemos que para usar “cualquier tipo de dato” podemos usar el tipo any sin embargo, esto es peligroso ya que le indicamos que puede entrar cualquier tipo de dato.
 
   Es por ello que es una muy buena práctica utilizar el tipo de dato unknown ya que esta nos permite trabajar con cualquier tipo de dato pero en base al tipo de dato podemos asignarla a otra variable o realizar algo en especial.
+
+## Never type
+  El tipo de dato never, más que todo sirve para tipar a una función que nunca va a finalizar o sencillamente que pueda terminar el programa en el caso de lanar una excepción.
+  ```typescript
+  // esta funcion no tiene un punto final ya que dispara una excepcion
+  function error(mensaje: string): never {
+      throw new Error(mensaje);
+  }
+  ```
+
+  Un ejemplo de ello es cuando queremos manejar un error o cuando ejecutamos un loop infinito, como por ejemplo una validación de un token de cada x’s segundos, que es una función que se ejecuta constantemente, ya que lanzas la función, esta envía el token lo valida, y comienza el timer para hacer el refresh de ese token, si hay un error lanza una excepción y si no continúa con la validación y el timer.
+  ```typescript
+  function myFunction(): never {
+    throw new Error('Error!');
+  }
+
+    // esta funcion no tiene un punto final ya que dispara un error
+  function fallo(): never {
+      return error("Reportar fallo");
+  }
+
+  // esta funcion no finaliza ya que posee un loop infinito
+  function loopInfinito() : never {
+      while(true){}
+  }
+  ```
