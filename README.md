@@ -201,4 +201,13 @@ Curso de TypeScript: Tipos Avanzados y Funciones
     }
   }
   ```
-  
+  [TypeORM](https://typeorm.io/)
+
+  ### Buenas prácticas
+  - Cuando tengamos sobre carga de métodos y por alguna razón tengamos un unknown o any, en esa sobre carga, lo mejor es dejar ese unknowno any al final. Caso contario no funcionará correctamente esa aserción de tipos y por ende el autocompletado del editor.
+  ![](https://static.platzi.com/media/user_upload/1-b017dd75-e4ad-4551-b09a-e4973291f829.jpg)
+  - Evaluar si realmente se necesita una sobre carga o simplemente puedes buscar otra forma de hacerlo como ser usando valores opcionales.
+  ![](https://static.platzi.com/media/user_upload/2-5273274e-7f1d-478d-b369-98ddda7ccad6.jpg)
+  ![](https://static.platzi.com/media/user_upload/3-de869952-ef8f-466c-be14-c6ec7620346a.jpg)
+  ![](https://static.platzi.com/media/user_upload/4-698c2d2e-b287-4727-beac-1e5c44c8fa2a.jpg)
+  ![](https://static.platzi.com/media/user_upload/5-5f0ead6f-e36b-42b1-b25b-6bb7cc2f15df.jpg)
