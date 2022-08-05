@@ -270,4 +270,14 @@ Curso de TypeScript: Tipos Avanzados y Funciones
   ```
   En este caso podemos tener una interface base que sea heredada por todas las demás interfaces en la app.
 
-
+## Propiedades de solo lectura
+  - A este lo vamos a utilizar cuando queramos que cierta propiedad solamente sea de lectura y no se la pueda modificar o sobreescribir a lo largo de nuestro programa.
+  - Como su nombre lo indica, este feature de TS nos ayuda a tener ciertos atributos solo de lectura. Lo que significa que no pueden ser modificados. Un buen caso de uso es el id y el createdAt.
+  - Para crear una propiedad de solo lectura, podemos usar el decorador @readonly.
+  ```typescript
+  class Person {
+    @readonly
+    name: string;
+    age: number;
+  }
+  ```
