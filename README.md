@@ -249,4 +249,25 @@ Curso de TypeScript: Tipos Avanzados y Funciones
   }
   ```
 
+## Extender interfaces
+  Es básicamente la herencia como funciona en la programación orientada a objetos.
+  Diferencia con type al usar interfaces podemos aplicar herencia, pero esto no ocurre con type.
+  Así como las clases en POO, en las interfaces también podemos hacer uso de la herencia. De esta forma podemos tener una interface base que sea heredada por todas las demás interfaces en la app.
+  ```typescript
+  interface Person {
+    name: string;
+    age: number;
+  }
+  interface Employee extends Person {
+    job: string;
+  }
+  interface Student extends Person {
+    grade: number;
+  }
+  interface Teacher extends Employee, Student {
+    teach: boolean;
+  }
+  ```
+  En este caso podemos tener una interface base que sea heredada por todas las demás interfaces en la app.
+
 
