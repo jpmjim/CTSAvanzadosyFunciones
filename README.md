@@ -308,4 +308,60 @@ Curso de TypeScript: Tipos Avanzados y Funciones
   - [Qué pasó con Faker.js](https://www.youtube.com/watch?v=y3u0w7oHgP8)
   - [Creador corrompe repo con millones de usuarios: jaque al open-source](https://platzi.com/blog/creador-borra-fakerjs-news/)
 
+## Omit y Pick Type
+  Estos tipos de datos nos permiten crear nuevas interfaces basadas de otras, pero omitiendo o seleccionando solo ciertos valores. Estos funcionan de la siguiente forma.
+  
+  ### DTOs
+  Es una abreviatura para referirnos a Data Transfer Objects u Objeto de Transferencias de datos.
 
+  Hay momentos particulares en los que nosotros no necesitamos del todo los tipos, es decir, hay parámetros que no hacen falta, por ejemplo, mandarlos al momento de la creación de un objeto, ya que estos son automáticos como el ID o la fecha de creación.
+  ![](https://static.platzi.com/media/user_upload/1-3564a3a9-81b6-4bef-bf16-c60997ae9e93.jpg)
+  Así que podemos omitir algunos parámetros o campos que en ese particular momento no hacen falta, esto no significa que no están el objeto, sino que al momento de la creación solo necesitamos ciertos parámetros y la API, la base de datos se encargará de insertar lo demás.
+  ![](https://static.platzi.com/media/user_upload/2-5f1ea408-ec76-4a2b-826a-ce7097b57c10.jpg)
+
+  ### Omit
+  Con omit podemos omitir las propiedades, campos o llaves que quieramos.
+  ```typescript
+  interface Person {
+    name: string;
+    age: number;
+    job: string;
+    teach: boolean;
+    grade: number;
+  }
+  const person: Person = {
+    name: 'Juan',
+    age: 30,
+    job: 'Programmer',
+    teach: true,
+    grade: 10
+  }
+  const personOmit: Omit<Person, 'name' | 'age'> = {
+    job: 'Programmer',
+    teach: true,
+    grade: 10
+  }
+  ```
+
+  ### Pick
+  Con pick podemos seleccionar las propiedades, campos o llaves que quieramos.
+  ```typescript
+  interface Person {
+    name: string;
+    age: number;
+    job: string;
+    teach: boolean;
+    grade: number;
+  }
+  const person: Person = {
+    name: 'Juan',
+    age: 30,
+    job: 'Programmer',
+    teach: true,
+    grade: 10
+  }
+  const personPick: Pick<Person, 'name' | 'age'> = {
+    name: 'Juan',
+    age: 30
+  }
+  ```
