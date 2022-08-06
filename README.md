@@ -365,3 +365,59 @@ Curso de TypeScript: Tipos Avanzados y Funciones
     age: 30
   }
   ```
+
+## Partial y Required Type
+  Estos dos tipos de datos nos sirven para declarar que todos los campos de una interfaz son opcionales u obligatorios.
+
+  ### Partial
+  Con partial podemos declarar que algunos campos de una interfaz son opcionales.
+  ```typescript
+  interface Person {
+    name: string;
+    age: number;
+    job: string;
+    teach: boolean;
+    grade: number;
+  }
+  const person: Person = {
+    name: 'Juan',
+    age: 30,
+    job: 'Programmer',
+    teach: true,
+    grade: 10
+  }
+  const personPartial: Partial<Person> = {
+    name: 'Juan',
+    age: 30,
+    job: 'Programmer',
+    teach: true,
+    grade: 10
+  }
+  ```
+
+  ### Required
+  Con required podemos declarar que todos los campos de una interfaz son obligatorios.
+  ```typescript
+  interface Person {
+    name: string;
+    age: number;
+    job: string;
+    teach: boolean;
+    grade: number;
+  }
+  const person: Person = {
+    name: 'Juan',
+    age: 30,
+    job: 'Programmer',
+    teach: true,
+    grade: 10
+  }
+  const personRequired: Required<Person> = {
+    name: 'Juan',
+    age: 30,
+    job: 'Programmer',
+    teach: true,
+    grade: 10
+  }
+  ```
+  
