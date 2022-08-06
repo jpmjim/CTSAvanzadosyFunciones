@@ -485,3 +485,13 @@ Curso de TypeScript: Tipos Avanzados y Funciones
     grade: 10
   }
   ```
+
+## Acceder al tipado por indice
+  Podemos acceder al tipado de una interface por media de bracket notation, al colocar una propiedad entre comillas dentro de los brackets vamos a obtener por resultado el tipo de dato que tiene esa propiedad.
+
+  Al colocar el tipo de dato de esta forma nos evitamos los dolores de cabeza cuando se nos cambien algún tipo de dato de nuestra interface por alguna razón.
+  ```typescript
+  InterfaceName['property']
+  const updateProduct = (idSearch: Product['id'])
+  ```
+  En este caso estamos pasando como tipo de dato una interface y como índice tenemos a una de sus propiedades, por ende lo que en realidad recibe la propiedad de la función (idSearch) es el tipo de dato de ese índice de la interface.
