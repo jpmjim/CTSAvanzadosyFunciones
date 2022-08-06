@@ -281,3 +281,31 @@ Curso de TypeScript: Tipos Avanzados y Funciones
     age: number;
   }
   ```
+
+## Ejemplo de CRUD
+  CRUD es una palabra que se usa para crear, leer, actualizar y borrar.
+  - Crear: Para crear un nuevo registro en la base de datos, podemos usar el método create de la clase Model.
+  - Leer: Para leer un registro de la base de datos, podemos usar el método find de la clase Model.
+  - Actualizar: Para actualizar un registro de la base de datos, podemos usar el método update de la clase Model.
+  - Borrar: Para borrar un registro de la base de datos, podemos usar el método delete de la clase Model.
+
+  Herramienta a usar faker para crear datos aleatorios:
+  ```typescript
+  import faker from 'faker';
+  ```
+  [Faker](https://fakerjs.dev/) es una librería que nos permite crear datos aleatorios para nuestras interfaces.
+  ```typescript
+  const name = faker.name.firstName();
+  const age = faker.random.number();
+  const job = faker.name.jobTitle();
+  const teach = faker.random.boolean();
+  const grade = faker.random.number();
+  ```
+  Instalar la librería faker:
+  ```typescript
+  npm install @faker-js/faker --save-dev
+  ```
+  - [Qué pasó con Faker.js](https://www.youtube.com/watch?v=y3u0w7oHgP8)
+  - [Creador corrompe repo con millones de usuarios: jaque al open-source](https://platzi.com/blog/creador-borra-fakerjs-news/)
+
+
