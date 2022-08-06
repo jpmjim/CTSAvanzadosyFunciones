@@ -420,4 +420,68 @@ Curso de TypeScript: Tipos Avanzados y Funciones
     grade: 10
   }
   ```
-  
+
+## Readonly Type
+  Con esta propiedad le decimos TypeScript que todos los parámetros solamente sean de lectura, por ende nos pueden ser mutados a lo largo de nuestro programa.
+  ```typescript
+  interface Person {
+    name: string;
+    age: number;
+    job: string;
+    teach: boolean;
+    grade: number;
+  }
+  const person: Person = {
+    name: 'Juan',
+    age: 30,
+    job: 'Programmer',
+    teach: true,
+    grade: 10
+  }
+  const personReadonly: Readonly<Person> = {
+    name: 'Juan',
+    age: 30,
+    job: 'Programmer',
+    teach: true,
+    grade: 10
+  }
+  ```
+  ### Anidamiento de utility types
+  Podemos utilizar el anidamiento para poder fusionar las distintas características de los diferentes utility types.
+  ```typescript
+  interface Person {
+    name: string;
+    age: number;
+    job: string;
+    teach: boolean;
+    grade: number;
+  }
+  const person: Person = {
+    name: 'Juan',
+    age: 30,
+    job: 'Programmer',
+    teach: true,
+    grade: 10
+  }
+  const personReadonly: Readonly<Person> = {
+    name: 'Juan',
+    age: 30,
+    job: 'Programmer',
+    teach: true,
+    grade: 10
+  }
+  const personPartial: Partial<Person> = {
+    name: 'Juan',
+    age: 30,
+    job: 'Programmer',
+    teach: true,
+    grade: 10
+  }
+  const personRequired: Required<Person> = {
+    name: 'Juan',
+    age: 30,
+    job: 'Programmer',
+    teach: true,
+    grade: 10
+  }
+  ```
