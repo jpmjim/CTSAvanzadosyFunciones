@@ -495,3 +495,12 @@ Curso de TypeScript: Tipos Avanzados y Funciones
   const updateProduct = (idSearch: Product['id'])
   ```
   En este caso estamos pasando como tipo de dato una interface y como índice tenemos a una de sus propiedades, por ende lo que en realidad recibe la propiedad de la función (idSearch) es el tipo de dato de ese índice de la interface.
+
+## ReadonlyArray
+  Tenemos muchos métodos de array que nos permiten mutar un array, pero en programación, en general, se evita hacer mutaciones en un array por lo que se prefiere crear nuevos estados para evitar efectos secundarios.
+
+  Para evitar estas mutaciones es que utilizamos a ReadonlyArray como un tipo de dato más.
+  ```typescript
+  const array: ReadonlyArray<number> = [1, 2, 3, 4, 5]
+  array[0] = 10
+  ```
